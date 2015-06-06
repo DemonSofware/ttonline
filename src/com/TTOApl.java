@@ -7,8 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import tt.ITTConnector;
-
-
+import tt.ITestTT;
+import tt.TTData;
 
 @Controller
 @Scope("session")
@@ -20,7 +20,8 @@ public class TTOApl {
 	
 	@RequestMapping({"/"})
 	public String index(Model model) {
-		model.addAttribute("tattr", ittconnector.testFuncion());
+		TTData ttData_Test = ittconnector.getTT(ITestTT.TEST_TTID);
+		model.addAttribute("tattr", ttData_Test.toString());
 		return "index";
 	}
 	

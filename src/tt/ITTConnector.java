@@ -1,5 +1,6 @@
 package tt;
 
 public interface ITTConnector {
-	String testFuncion();
+	TTData getTT(String ttId);
+	Boolean saveTT(TTData tt);
 }
