@@ -6,26 +6,26 @@ import java.util.List;
 
 public class TTData implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2L;
 	
-	private String ttId = null;
-	private String ttStyle = null;
-	private String ttEmail = null;
-	private String ttPassword = null;
-	private String ttName = null;
-	private String ttTimeZone = null;
-	private String ttTimeSlot = null;
-	private String startWorkeTime = null;
-	private String endWorkeTime = null;
-	private List<Integer> workeDays = null;
+	protected Long ttId = null;
+	protected String ttStyle = null;
+	protected String ttEmail = null;
+	protected String ttPassword = null;
+	protected String ttName = null;
+	protected String ttTimeZone = null;
+	protected String ttTimeSlot = null;
+	protected String startWorkeTime = null;
+	protected String endWorkeTime = null;
+	protected List<Integer> workeDays = null;
 	// 0 - non selected slots, 1 - one client selects one slot, n - n clients select one slot
-	private Integer countClientsSelectedOneSlot = null;
-	private HashMap<String, TTEvent> ttEvents = null;
+	protected Integer countClientsSelectedOneSlot = null;
+	protected HashMap<String, TTEvent> ttEvents = null;  // почему хеш мап?
 
 	public TTData() {}
 
 	public TTData(
-			String ttId, 
+			Long ttId, 
 			String ttStyle, 
 			String ttEmail,
 			String ttPassword, 
@@ -53,11 +53,11 @@ public class TTData implements Serializable {
 		this.ttEvents = ttEvents;
 	}
 
-	public String getTtId() {
+	public Long getTtId() {
 		return ttId;
 	}
 
-	public void setTtId(String ttId) {
+	public void setTtId(Long ttId) {
 		this.ttId = ttId;
 	}
 

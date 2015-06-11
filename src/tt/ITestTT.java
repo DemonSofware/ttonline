@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ITestTT {
 
-	static final String TEST_TTID = "testID1234567890";
+	static final Long TEST_TTID = (long) 1234567890;
 	static final String TEST_ttStyle = "Default"; 
 	static final String TEST_ttEmail = "test1.iskatel@gmail.com";
 	static final String TEST_ttPassword = null; 
