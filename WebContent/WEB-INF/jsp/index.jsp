@@ -12,8 +12,11 @@
 		<title>ttonline</title>
 	</head>
 	<body>
-		<p>${tattr}</p>
+		<%-- <p>${tattr}</p> --%>
+		<form id="log">
+		<button type="submit" onclick="log.action='settings'"><spring:message code="newTimeTable"/></button>
 		<p><spring:message code="newTimeTable"/></p>
 		<p><spring:message code="aboutTTOnline"/></p>
+		</form>
 	</body>
 </html>

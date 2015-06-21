@@ -25,6 +25,11 @@ public class TTOApl {
 		return "index";
 	}
 	
+	@RequestMapping({"/settings"})
+	public String settings(Model model){
+		
+		return "settings";
+	}
 	
 	
 }
